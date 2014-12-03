@@ -17,6 +17,7 @@ typedef NS_ENUM(NSInteger, JTCalendarWeekDayFormat) {
 
 @property (assign, nonatomic) BOOL isWeekMode;
 @property (assign, nonatomic) BOOL useCacheSystem;
+@property (assign, nonatomic) BOOL scrollDisabled;
 
 // Month
 @property (strong, nonatomic) UIColor *menuMonthTextColor;
@@ -54,6 +55,8 @@ typedef NS_ENUM(NSInteger, JTCalendarWeekDayFormat) {
 
 @property (assign, nonatomic) CGFloat dayCircleRatio;
 @property (assign, nonatomic) CGFloat dayDotRatio;
+
+@property (strong, nonatomic) NSString *dayFormat;
 
 - (NSCalendar *)calendar;
 

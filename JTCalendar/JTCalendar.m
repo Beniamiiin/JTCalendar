@@ -7,7 +7,7 @@
 
 #import "JTCalendar.h"
 
-#define NUMBER_PAGES_LOADED 5 // Must be the same in JTCalendarView, JTCalendarMenuView, JTCalendarContentView
+#define NUMBER_PAGES_LOADED 3 // Must be the same in JTCalendarView, JTCalendarMenuView, JTCalendarContentView
 
 @interface JTCalendar(){
     BOOL cacheLastWeekMode;
@@ -154,8 +154,8 @@
         
     int currentPage = roundf(fractionalPage);
     if (currentPage == (NUMBER_PAGES_LOADED / 2)){
-        self.menuMonthsView.scrollEnabled = YES;
-        self.contentView.scrollEnabled = YES;
+        self.menuMonthsView.scrollEnabled = !self.calendarAppearance.scrollDisabled;
+        self.contentView.scrollEnabled = !self.calendarAppearance.scrollDisabled;
         return;
     }
     
@@ -173,8 +173,8 @@
     
     [self setCurrentDate:currentDate];
     
-    self.menuMonthsView.scrollEnabled = YES;
-    self.contentView.scrollEnabled = YES;
+    self.menuMonthsView.scrollEnabled = !self.calendarAppearance.scrollDisabled;
+    self.contentView.scrollEnabled = !self.calendarAppearance.scrollDisabled;
 }
 
 - (void)repositionViews

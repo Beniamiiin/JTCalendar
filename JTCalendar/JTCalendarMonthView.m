@@ -10,7 +10,7 @@
 #import "JTCalendarMonthWeekDaysView.h"
 #import "JTCalendarWeekView.h"
 
-#define WEEKS_TO_DISPLAY 6
+#define WEEKS_TO_DISPLAY 5
 
 @interface JTCalendarMonthView (){
     JTCalendarMonthWeekDaysView *weekdaysView;
